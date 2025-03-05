@@ -28,6 +28,7 @@ from wkdhash import userid_to_wkd_hash
 
 assert(userid_to_wkd_hash("mail@example.com") == "dizb37aqa5h4skgu7jf1xjr4q71w4paq")
 assert(userid_to_wkd_hash("Test User <mail@example.com>", include_domain=True) == "dizb37aqa5h4skgu7jf1xjr4q71w4paq@example.com")
+```
 
 ## Command-line-utility
 
