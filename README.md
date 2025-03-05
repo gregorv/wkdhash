@@ -19,6 +19,16 @@ gpg --list-keys --with-wkd-hash $IDENTITY
 
 but it is not easily doable from Python when using python-gnupg.
 
+## API
+
+A single function is the only thing you really need:
+
+```python
+from wkdhash import userid_to_wkd_hash
+
+assert(userid_to_wkd_hash("mail@example.com") == "dizb37aqa5h4skgu7jf1xjr4q71w4paq")
+assert(userid_to_wkd_hash("Test User <mail@example.com>", include_domain=True) == "dizb37aqa5h4skgu7jf1xjr4q71w4paq@example.com")
+
 ## Command-line-utility
 
 A simple command line utility entry-point is provided by this package,
